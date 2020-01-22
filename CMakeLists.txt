@@ -88,6 +88,17 @@ if(CUDA_VERSION_MAJOR GREATER 9)
 	endif()
 endif()
 
+# WPILIBC
+find_package(wpilibc COMPONENTS wpilibc)
+find_package(wpiutil COMPONENTS wpiutil)
+find_package(ntcore COMPONENTS ntcore)
+find_package(cameraserver COMPONENTS cameraserver)
+find_package(cscore COMPONENTS cscore)
+
+if (wpilibc_FOUND)
+	set(HAS_WPILIBC 1)
+endif()
+
 # setup project output paths
 set(PROJECT_OUTPUT_DIR  ${PROJECT_BINARY_DIR}/${CMAKE_SYSTEM_PROCESSOR})
 set(PROJECT_INCLUDE_DIR ${PROJECT_OUTPUT_DIR}/include)

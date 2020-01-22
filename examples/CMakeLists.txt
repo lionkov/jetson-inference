@@ -10,6 +10,10 @@ add_subdirectory(segnet-camera)
 
 add_subdirectory(superres-console)
 
+if(HAS_WPILIBC)
+add_subdirectory(frc)
+endif()
+
 if(HAS_OPENCV)
 	add_subdirectory(homography-console)
 	add_subdirectory(homography-camera)

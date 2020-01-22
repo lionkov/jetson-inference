@@ -118,11 +118,11 @@ int main( int argc, char** argv )
 	/*
 	 * create openGL window
 	 */
-	glDisplay* display = glDisplay::Create();
+	glDisplay* display = NULL; /*glDisplay::Create();
 
 	if( !display ) 
 		printf("detectnet-camera:  failed to create openGL display\n");
-
+	*/
 
 	/*
 	 * start streaming
